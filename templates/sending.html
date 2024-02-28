@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>POC</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="h-screen flex flex-col items-center justify-center">
+    {% if message %}
+        <div class="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
+          <span class="font-medium">Info alert!</span> {{ message }}
+        </div>
+    {% endif %}
+    <p class="text-green-700 text-xl mb-3">
+      Welcome to POC test
+    </p>
+
+    <form method="POST" action="/schedule-announcement/">
+        <input type="datetime-local" id="scheduled_time" name="scheduled_time" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-4">
+        <textarea id="message" name="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..." required></textarea>
+
+        <button type="submit"
+                class="bg-green-400 w-full mt-4">
+            Send message
+        </button>
+    </form>
+</div>
+</body>
+</html>

@@ -28,4 +28,8 @@
 * **⚠️ Please read these instructions.**
 
 * Clone this repo on your machine.
+* Run the command
+```
+pip install - r requirements
+```
 
