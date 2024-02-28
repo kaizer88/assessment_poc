@@ -61,7 +61,6 @@ def send_announcement(announcement: Announcement):
 
 def send_now(announcement: Announcement):
     # Simulate sending the announcement
-    ggg = sent_announcements
     if announcement.message not in sent_announcements:
         # In a real system, you would send the announcement via WhatsApp API
         # Record the sent announcement to avoid duplication
@@ -79,7 +78,7 @@ async def schedule_announcement(request: Request):
 
 
 @app.post("/schedule-announcement", response_class=HTMLResponse)
-async def schedule_announcement(request: Request, message: str = Form(...), scheduled_time: str = Form(None)):
+async def schedule_announcement(request: Request, message: str = Form(...), scheduled_time: datetime = Form(None)):
     announcement = Announcement
     announcement.scheduled_time = scheduled_time
     announcement.message = message
