@@ -28,8 +28,27 @@
 * **⚠️ Please read these instructions.**
 
 * Clone this repo on your machine.
-* Run the command
+* Run the command to install requirements
 ```
 pip install - r requirements
 ```
+* Run the command to run tests
+```
+pytest test_tasks.py
+```
+* Run the command to run the app
+```
+python main.py
+```
+* Go to link to write an message
+```
+http://127.0.0.1:8001/schedule-announcement
+```
+
+* This app allows a user to send messegaes and store them in memoey in a set().
+* You can schedute them buy selecting the datetime and is optional datetime, however you are required to type a message.
+* You can only send a duclicate if you scdheduling the message however it will not be sent.
+
+
+
 
