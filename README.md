@@ -47,7 +47,7 @@ http://127.0.0.1:8001/schedule-announcement
 
 * This app allows a user to send messegaes and store them in memoey in a set().
 * You can schedute them buy selecting the datetime and is optional datetime, however you are required to type a message.
-* You can only send a duclicate if you scdheduling the message however it will not be sent.
+* You can only send a duplicates if you are scheduling the message however it will not be sent.
 
 
 
